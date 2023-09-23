@@ -1,4 +1,11 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {}
+const nextConfig = {
+    reactStrictMode:true,
+    images:{
+        domains:[
+            "img-prod-cms-rt-microsoft-com.akamaized.net",
+        ]
+    }
+}
 
 module.exports = nextConfig

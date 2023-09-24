@@ -4,8 +4,7 @@ const page = () => {
     <div className="container mx-auto p-6">
       <section id="banner">
         <Banner/>
-      </section>
-     
+      </section>     
     </div>
   )
 }

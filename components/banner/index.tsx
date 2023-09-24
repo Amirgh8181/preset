@@ -1,4 +1,8 @@
+"use client"
+import { useState } from "react"
+
 const Banner = () => {
+  const [amir,setAmir]=useState([])
   return (
     <div className="flex justify-center items-center w-32 h-12 bg-yellow-700 rounded-2xl border-2 border-black mx-auto">Banner</div>
   )

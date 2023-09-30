@@ -12,6 +12,7 @@ export default function RootLayout({ children, }: { children: React.ReactNode })
         <link rel="manifest" href="public/manifest.json" />
         <link rel="apple-touch-icon" href="public/icon.svg"></link>
         <meta name="theme-color" content="#000" />
+       <link rel="shortcut icon" href="/icon.svg" type="image/x-icon" />
       </>
       <body>
         <Header />

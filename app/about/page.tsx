@@ -1,13 +1,13 @@
- import Image from 'next/image'
+import Image from 'next/image'
 import Link from "next/link"
 import { BsSunFill } from "react-icons/bs"
-import styles from '@/styles.module.css'
- const page = () => {
+import styles from './styles.module.css'
+const page = () => {
   return (
     <div className={styles.textcol}>
 
-       {/* Link */}
-       <Link target={'_blank'} href={"/about"} className="block">about</Link>
+      {/* Link */}
+      <Link target={'_blank'} href={"/about"} className="block">about</Link>
       <Link href={"/year"} className="block">year</Link>
       <Link href={"/hell"} className="block">hell</Link>
       <Link target={'_blank'} href={"https://mernfa.ir/nextjs-learning"} className="block">mernfa</Link>
@@ -25,6 +25,7 @@ import styles from '@/styles.module.css'
       </svg>
 
 
+      <div>😂😂😂</div>
     </div>
   )
 }

@@ -3,6 +3,7 @@ import NotFound from "@/app/not-found";
 import { Metadata, ResolvingMetadata } from "next";
 import { getOneData } from "@/lib/getmovie";
 import { getData } from "@/lib/getallmovie";
+import SingleMovieNotFound from "./not-found";
 
 
 // dynamic metadata
@@ -12,7 +13,11 @@ export async function generateMetadata(
 ): Promise<Metadata> {
 
     const res = await getOneData(params.id)
-
+    if(!res.id)
+        return{
+            title:"movie not found"
+        }
+    
     return {
         title: res.title
     }
@@ -20,11 +25,9 @@ export async function generateMetadata(
 
 const MovieDetails = async ({ params, searchParams }: { params: { id: number }, searchParams: string }) => {
     let request = await getOneData(params.id)
-    console.log(request);
-
     // agar id ersali dar javab ma vojood nadasht not found ra neshan bede
     if (!request.id) {
-        return NotFound()
+        return SingleMovieNotFound()
     }
     return (
         <div className="container mx-auto bg-zinc-300 flex flex-row justify-between my-10 p-10 rounded-lg">

@@ -8,7 +8,6 @@ export default function RootLayout({ children, }: { children: React.ReactNode })
   return (
     <html lang="en">
       <>
-        <title>amir</title>
         <link rel="manifest" href="public/manifest.json" />
         <link rel="apple-touch-icon" href="public/icon.svg"></link>
         <meta name="theme-color" content="#000" />

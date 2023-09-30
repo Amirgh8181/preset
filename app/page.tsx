@@ -1,5 +1,7 @@
 import Banner from "../components/banner"
-const page = () => {
+
+
+const Home = () => {
   return (
     <div className="container mx-auto p-6">
       <section id="banner">
@@ -9,4 +11,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Home

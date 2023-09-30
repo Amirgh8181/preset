@@ -2,20 +2,7 @@
 import { useEffect, useState } from 'react'
 import axios from 'axios'
 
-interface movie {
-    country: string,
-    genres: string[],
-    id: number,
-    images: string[],
-    imdb_rating: string,
-    poster: string,
-    title: string,
-    year: string
-}
-interface fetchdatatype {
-    data: { data: movie[] },
-    metadata: object
-}
+
 
 const FetchDataCsr = () => {
     const [response, setResponse] = useState<movie[]>([])
@@ -28,8 +15,7 @@ const FetchDataCsr = () => {
             setResponse(req.data.data)
         }
         catch(e) {
-            console.log(e);
-            
+            throw new Error('faild to fetch data')
         }
 
     }

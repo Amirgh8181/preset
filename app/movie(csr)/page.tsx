@@ -1,4 +1,4 @@
-import FetchDataCsr from '../../components/csr request'
+import FetchDataCsr from '@/components/csr request'
 const CsrMovie = () => {
   return (
     <div>

@@ -1,6 +1,6 @@
 import Image from "next/image"
 import Link from "next/link"
-import { getData } from "../../lib/getallmovie"
+import { getData } from "@/lib/getallmovie"
 
 
 

@@ -1,4 +1,4 @@
-import SsrRequest from "../../components/ssr request"
+import SsrRequest from "@/components/ssr request"
 const SsrMovie = () => {
     return (
         <div className="container mx-auto my-8">

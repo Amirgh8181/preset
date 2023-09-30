@@ -1,7 +1,7 @@
  import Image from 'next/image'
 import Link from "next/link"
 import { BsSunFill } from "react-icons/bs"
-import styles from './styles.module.css'
+import styles from '@/styles.module.css'
  const page = () => {
   return (
     <div className={styles.textcol}>

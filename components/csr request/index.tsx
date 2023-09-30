@@ -1,24 +1,21 @@
 "use client"
 import { useEffect, useState } from 'react'
 import axios from 'axios'
+import { getData } from '@/lib/getallmovie'
 
 
 
 const FetchDataCsr = () => {
     const [response, setResponse] = useState<movie[]>([])
     useEffect(() => {
-        getdata()
+        res()
     }, [])
-    const getdata = async () => {
-        try {
-            const req: fetchdatatype = await axios.get("https://moviesapi.ir/api/v1/movies?page={page}")
-            setResponse(req.data.data)
-        }
-        catch(e) {
-            throw new Error('faild to fetch data')
-        }
 
+    const res=async()=>{
+        let result:movie[]=await getData()
+        setResponse(result)
     }
+
     return (
         <div>
             {

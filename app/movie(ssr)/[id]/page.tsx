@@ -1,8 +1,8 @@
 import Image from "next/image";
-import NotFound from "../../not-found";
+import NotFound from "@/app/not-found";
 import { Metadata, ResolvingMetadata } from "next";
-import { getOneData } from "../../../lib/getmovie";
-import { getData } from "../../../lib/getallmovie";
+import { getOneData } from "@/lib/getmovie";
+import { getData } from "@/lib/getallmovie";
 
 
 // dynamic metadata

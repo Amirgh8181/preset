@@ -1,8 +1,11 @@
 import Link from 'next/link'
 import React from 'react'
+import Search from "@/components/search"
+
 const Header = () => {
     return (
         <div className='bg-blue-400 p-8'>
+            <Search />
             <div className='flex justify-between'>
                 <h1 className='text-4xl text-white hover:text-yellow-300 transition-all duration-300'><Link href={'/'}>AmirMovie</Link></h1>
                 <nav><ul className='flex space-x-4 text-blue-400'>

@@ -13,3 +13,10 @@ type fetchdatatype = {
     data: { data: movie[] },
     metadata: object
 }
+
+type routeRequest={
+    title?:string
+    userId?:number
+    id?:number
+    completed?:boolean
+}

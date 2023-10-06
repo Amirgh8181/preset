@@ -1,11 +1,17 @@
 import { NextResponse } from "next/server"
+
+
 const url: string = process.env.DATA_SOURCE_URL as string
 const apiKey:string=process.env.DATA_API_KEY as string
+
+//CRUD
 export async function GET() {
     const res = await fetch(url)
     const todos = await res.json()
     return NextResponse.json(todos)
 }
+
+
 export async function POST(request:Request) {
     const {userId,title}:routeRequest=await request.json()
     if (!userId || !title) return NextResponse.json({"message":"userId and title required"})   
@@ -21,6 +27,8 @@ export async function POST(request:Request) {
     const todos = await res.json()
     return NextResponse.json(todos)
 }
+
+
 export async function DELETE(request:Request) {
     const {id}:routeRequest=await request.json() 
     if (!id) return NextResponse.json({"message":"id required"})   
@@ -34,6 +42,8 @@ export async function DELETE(request:Request) {
     )
     return NextResponse.json({"message" : `Todo ${id} deleted`})
 }
+
+
 
 export async function PUT(request:Request) {
     const {userId,title,id,completed}:routeRequest=await request.json()

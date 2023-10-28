@@ -14,9 +14,10 @@ const page = () => {
       {/* image */}
       <Image className="" priority={true} width={100} height={100} src={'/images/licensed-image.jpg'} alt="pinguin" />
       <Image title="forign website" className="" priority={true} width={200} height={200} src={'https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE4LEgb?ver=421a&q=90&m=6&h=705&w=1253&b=%23FFFFFFFF&f=jpg&o=f&p=140&aim=true'} alt="pinguin" />
-      {/* video */}
+      {/* video 
       <video controls className="h-48" src="https://dl.mernfa.ir/public-files/mernfa-ir-full-intro/mernfa.ir-intro.mp4"></video>
       <video controls className="h-48" src={'/videos/mernfair-nextpro-00-intro.mp4'}></video>
+      */}
       {/* react icons */}
       <BsSunFill className="w-24 h-24 text-yellow-500" />
       {/* hero icons */}

@@ -45,10 +45,10 @@ const MainPage = () => {
                 <motion.div className="w-[50vw] h-80 rounded-lg bg-[#706468] space-y-24" variants={contVariant} initial="hidden" animate="show" exit="exit">
                     <motion.h1 className="flex justify-center items-center text-white text-5xl mx-auto pt-4" variants={childVariant}>Choose an option</motion.h1>
                     <motion.ul className="flex justify-center items-center space-x-8" variants={childVariant}>
-                        <li className='flex justify-center items-center text-xl w-48 h-16 bg-[#4c269a] hover:bg-yellow-400 text-white hover:text-black transition-all duration-300 rounded-xl'>
+                        <li className='flex justify-center items-center text-xl w-48 h-16 bg-[#4c269a] hover:bg-purple-900 text-white hover:text-black transition-all duration-300 rounded-xl'>
                             <Link href={'/movie(csr)'}>movie(csr)</Link>
                         </li>
-                        <li className='flex justify-center items-center text-xl w-48 h-16 bg-[#4c269a] hover:bg-yellow-400 text-white hover:text-black transition-all duration-300 rounded-xl'>
+                        <li className='flex justify-center items-center text-xl w-48 h-16 bg-[#4c269a] hover:bg-purple-900 text-white hover:text-black transition-all duration-300 rounded-xl'>
                             <Link href={'/movie(ssr)'}>movie(ssr)</Link>
                         </li>
                     </motion.ul>

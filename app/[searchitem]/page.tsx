@@ -1,16 +1,31 @@
 import getSearchMovie from '@/lib/getSearchMovie';
+import Image from 'next/image';
+import Link from 'next/link';
 import React from 'react'
 
 const SearchRes = async ({ params }: { params: { searchitem: string } }) => {
   console.log(params);
   const res = await getSearchMovie(params)
   const result = res?.data
+  console.log(result);
+
+
+
 
   return (
-    <div>
-      {
+    <div className="flex flex-wrap justify-center gap-8 my-16">
+    {
 
-        result.length > 1 ? result?.map((item: movie) => <div key={item.id}>{item.title}</div>) : <div> {result[0].title}</div>
+        result?.map((item: movie) =>
+          <Link href={`/movie(ssr)/${item.id}?AMIR=22`} key={item.id} className="group flex flex-col justify-center items-center w-[14rem] h-[27rem] border border-blue-500 rounded-xl space-y-4">
+            <Image width={200} height={240} alt={item.title} src={item.poster} className="group-hover:scale-110 object-cover rounded-xl" />
+            <h3 className="text-center">{item.title}</h3>
+            <div className="flex justify-around w-full">
+              <div className="bg-gray-400 rounded-xl w-16 h-8 flex justify-center items-center">{item.year}</div>
+              <div title={item.country} className="bg-gray-400 rounded-xl text-sm w-16  flex justify-center items-center overflow-hidden whitespace-nowrap">{item.country}</div>
+            </div>
+          </Link>
+        )
       }
     </div>
   )

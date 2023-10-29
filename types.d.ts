@@ -1,22 +1,35 @@
 
 type movie = {
-    country: string,
-    genres: string[],
+
     id: number,
-    images: string[],
-    imdb_rating: string,
-    poster: string,
     title: string,
-    year: string
+    poster: string,
+    year: string,
+    rated: string,
+    released: string,
+    runtime: string,
+    director: string,
+    writer: string,
+    actors: string,
+    plot: string,
+    country: string,
+    awards: string,
+    metascore: string,
+    imdb_rating: string,
+    imdb_votes: string,
+    imdb_id: string,
+    type: string,
+    genres: string[],
+    images: string[]
 }
 type fetchdatatype = {
     data: { data: movie[] },
     metadata: object
 }
 
-type routeRequest={
-    title?:string
-    userId?:number
-    id?:number
-    completed?:boolean
+type routeRequest = {
+    title?: string
+    userId?: number
+    id?: number
+    completed?: boolean
 }
